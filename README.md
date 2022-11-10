@@ -1,6 +1,6 @@
-# tflite_image_classification
+# Halamang Gamot App
 
-A new Flutter project.
+Herbal App using image recognition and display description of the recognize herbal plant made in Flutter, Dart, Tensorflow
 
 ## Getting Started
 
