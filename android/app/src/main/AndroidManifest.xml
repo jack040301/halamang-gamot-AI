@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tflite_image_classification">
    <application
-        android:label="tflite_image_classification"
+        android:label="HalamanGamot"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

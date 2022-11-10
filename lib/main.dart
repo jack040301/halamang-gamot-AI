@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 import 'package:tflite_image_classification/TfliteModel.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Herbal App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const TfliteModel(),
+          brightness: Brightness.dark, primaryColor: Colors.greenAccent),
+      home: const SplashScreen(),
     );
   }
 }
 
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 5)).then((value) =>
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const TfliteModel())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
+      body: Center(
+        child: Image.asset('assets/leaf.png'),
+      ),
+    );
+  }
+}

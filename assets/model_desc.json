@@ -1,0 +1,95 @@
+{
+    "herbalplant": [
+
+        {
+            "herbId":0,
+            "plantName": "Forest Tea",
+            "scienName": "Carmona retusa",
+            "location": "In Philippines, but easily found in Batan Islands and northern Luzon to Palawan and Mindanao",
+            "description": "Ehretia microphylla or Carmona retusa (Tsaang gubat) is registered in the Philippines’ Bureau of Foods and Drugs as a medicine for its proven therapeutic property. Its phytoconstituents include alkaloids, flavonoids, saponins, phenols, tannins, glycosides, terpenoids, and cardenolides. This herb is scientifically proven for its medicinal worth mainly its anti-spasmodic effect. It is extensively endorsed by the Philippines’ Department of Health in treatment stomachache, abdominal pain and diarrhea. The herb is prepared by making it as a tea hence its name tsaang-gubat which literally means tea from the forest. Intensive studies by the National Integrated Research Program on Medicinal Plants (NIRPROMP) showed that tsaang gubat leaves to be effective remedy for biliary colic. It can also work as a good mouth wash as it contains high fluoride content, thus preventing tooth decay. Traditionally, tsaang gubat is used as a disinfectant wash during childbirth. Newer studies showed that it has an anti-allergy component if used together with sambong and lagundi.",
+            "uses": "Antidiarrheal\r\nAntispasmodic\r\nAnti-allergic\r\nAntinociceptive\r\nAnti-inflammatory\r\nAntibacterial\r\nAntioxidant\r\nAnalgesic\r\nHepatoprotective\r\nEnhances wound healing\r\nHelps prevent tooth decay\r\nHelps treat cough\r\nHelps treat skin diseases\r\nAntimutagenic\r\n"
+        },
+        
+        {
+            "herbId":1,
+            "plantName": "Akapulko",
+            "scienName": "Senna alata/Cassia alata ",
+            "location": "Tropical Climate Areas",
+            "description": "This shrub can grow to only up to two meters tall, with flowers that take the shape of oblong sepals. The akapulko medicinal herb has chrysophanic acid known to be very effective in treating skin diseases. It also contains a particular form of laxative that can expel intestinal parasites.",
+            "uses": "Used as an anti-fungal and antibacterial treatment for different skin diseases that include the following:\r\n \r\n Ringworms\r\n Eczema\r\n Skin itchiness/inflammation\r\n Insect bites\r\n Scabies"
+        },
+       
+        {
+            "herbId":2,
+            "plantName": "Blue clictoria",
+            "scienName": "Clitoria ternatea",
+            "location": "This plant is native to equatorial Asia, including locations in South Asia and Southeast Asia but has also been introduced to Africa, Australia and the Americas.",
+            "description": "It is a perennial herbaceous plant, with elliptic, obtuse leaves. It grows as a vine or creeper, doing well in moist, neutral soil. Its most striking feature is the color of its flowers, a vivid deep blue; solitary, with light yellow markings. They are about 4 cm (1+1⁄2 in) long by 3 cm (1+1⁄4 in) wide. Some varieties yield white flowers.\r\n\r\nThe fruits are 5–7 cm (2–2+3⁄4 in) long, flat pods with six to ten seeds in each pod. They are edible when tender.\r\n\r\nIt is grown as an ornamental plant and as a revegetation species (e.g., in coal mines in Australia), requiring little care when cultivated. As a legume, its roots form a symbiotic association with soil bacteria known as rhizobia, which transform atmospheric N2 into a plant-usable form (a process called nitrogen fixing), therefore, this plant is also used to improve soil quality through the decomposition of nitrogen rich plant material.",
+            "uses": "In Southeast Asia, the flower is used as a natural food colouring to colour glutinous rice and desserts like the Eurasian putugal as well as an Ayurvedic medicine.\r\n\r\nalso for memory enhancing, nootropic, antistress, anxiolytic, antidepressant, anticonvulsant, tranquilizing, and sedative properties.\r\n"
+        },
+
+        {
+            "herbId":3,
+            "plantName": "Cat's Whisker",
+            "scienName": "Orthosiphon stamineus Benth",
+            "location": "South East Asia and in the tropical region of Australia.",
+            "description": " Orthosiphon stamineus (Cat’s Whiskers) is commonly used to treat renal inflammation, kidney stones, and dysuria. It contains antioxidant compounds like rosmarinic acid, beta-sitosterol, ursolic acid, glycolic acid, methylripariochromene A, bioflavonoids, and oleanolic acid. Methylripariochromene A present in the herb could decrease systolic blood pressure. Rosmarinic acid and methylated flavonoids are found in large amounts in this herb. Rosmarinic acid is a general antioxidant and anti-inflammatory compound. Methylated flavonoids have properties that combat cancer, oxidant stress, pathogenic bacteria, inflammations, cardio-vascular dysfunctions, and other diseases.",
+            "uses": "Antioxidant\r\nAnti-inflammatory\r\nAntihypertensive\r\nAntidiabetic\r\nAntirheumatic\r\nAnti-gout\r\nDiuretic\r\nNeuroprotective\r\nHepatoprotective\r\nNephroprotective\r\nAnti-nephrolithic/Anti-urolithiatic\r\nAnti-allergy\r\nAsthma and cough remedy\r\nAntibacterial\r\nAntifungal\r\nAntispasmodic\r\nAssists in weight loss\r\nTreats skin disorders/Maintains healthy skin\r\nStress relief"
+        },
+
+        {
+            "herbId":4,
+            "plantName": "Holy basil",
+            "scienName": "Ocimum tenuiflorum",
+            "location": "Southeast Asia / Indian subcontinent",
+            "description": "Holy basil (Ocimum tenuiflorum) is a plant that is native to India. It is commonly used in the traditional Indian medicine system, Ayurveda.\r\n\r\nHoly basil is sometimes called \"hot basil\" because of its peppery taste. Chemicals in holy basil are thought to decrease pain and swelling. They also might lower blood sugar in people with diabetes. Holy basil oil might act as an antioxidant.\r\n\r\nPeople use holy basil for anxiety, stress, diabetes, high cholesterol, and many other conditions, but there is no good scientific evidence to support any of these uses.\r\n\r\nDon't confuse holy basil (Ocimum tenuiflorum) with basil (Ocimum basilicum), which is very commonly used in cooking.",
+            "uses": "Antibacterial\r\nAntiviral\r\nAntifungal\r\nAnti-inflammatory\r\nAnalgesic (a painkiller)"
+        },
+
+        {
+            "herbId":5,
+            "plantName": "Insulin Plant",
+            "scienName": "Chamaecostus cuspidatus",
+            "location": "eastern Brazil (States of Bahia and Espirito Santo).",
+            "description": "is a perennial, herbaceous plant. It is an upright, spreading plant growing up to a height of 2 to 5 feet, with the tallest stems falling and lying on the ground.",
+            "uses": "The leaf of the plant helps in producing insulin. It control the blood sugar levels in the body. Insulin plant is a remarkable Ayurvedic medicine used to treat diabetes in a natural way."
+        },
+
+        
+        {
+            "herbId":6,
+            "plantName": "Madre De Cacao",
+            "scienName": "Gliricidia sepium",
+            "location": "Thoroughly naturalized throughout the Philippines in settled areas at low and medium altitudes.",
+            "description": "Madre de Cacao is nitrogen-fixing tree that can grow from 10 to 12 meters high. The tree is referred by many people as a quick-stick due to the characteristic of growing almost right away just by cutting it and directly planting it in the ground.",
+            "uses": " used for various purposes such as live fencing, fodder, coffee shade, firewood, green manure and rat poison. The tree can also be used for medicinal and insect repellant properties."
+        },
+       
+        {
+            "herbId":7,
+            "plantName": "Magosteen",
+            "scienName": "Garcinia mangostana",
+            "location": "Southeast Asia",
+            "description": "Mangosteen, (Garcinia mangostana), also called purple mangosteen, handsome tropical tree (family Clusiaceae) native to Southeast Asia and cultivated for its tart-sweet fruit. The mangosteen fruit is highly valued for its juicy, delicate texture and slightly astringent flavour and is commonly eaten fresh, canned, or dried. The plant is used locally in traditional medicine and has been promoted as an alternative cancer treatment, but clinical studies in humans are lacking.",
+            "uses": "Dysentery.\r\nDiarrhea.\r\nUrinary tract infections (UTIs).\r\nGonorrhea.\r\nThrush.\r\nTuberculosis.\r\nEczema.\r\nMenstrual disorders."
+        },
+
+        {
+            "herbId":8,
+            "plantName": "Niyog-niyogan",
+            "scienName": "Quisqualis Indica",
+            "location": "Southest Asian Countries including the Philippines, India, Myanmar and Malaysia",
+            "description": "Niyog-niyogan is a large climbing, woody shrub that is native in Southeast Asian countries including the Philippines, India, Myanmar and Malaysia. Niyog-niyogan grows to about 20 feet in height with leaves that is rounded at the bottom and pointed at the tips. Niyog Niyogan shrub has fragrant and colorful flowers. Niyog-niyogan flowers exhibit varying colors, from white, red, reddish purple, pink red to orange that sprouts into clusters. Niyog-niyogan has edible fruit that is ellipsoidal in shape with five lengthwise wings. It has seeds that are black in color. ",
+            "uses": "Anti-helmintic,  Niyog-niyogan leaves are pounded and applied to externally to skin ulcers and boils. Niyog-niyogan leaves are applied to the head to relieve headaches. Remedy for Diarrhea and Fever, ripe fruits of Niyog-niyogan are roasted and taken internally for diarrhea and fever treatment. Remedy for Dysuria or painful urination. Expels intestinal worms and parasite and treatment of inflammation of kidneys."
+        },
+      
+        {
+            "herbId":9,
+            "plantName": "Yerba Buena ",
+            "scienName": "Clinopodium douglasii",
+            "location": "North America to Asia",
+            "description": "Clinopodium douglasii is an aromatic herb of the Lamiaceae family. It is an aromatic, prostrate, glabrous, slightly hairy, branched herb. It is cultivated throughout the Philippines and is propagated by terminal cuttings. It contains 0.8% volatile oil, which consists mainly of pulgenone, pitoeitone, limonene, menthol, menthene and menthenone. Yerba Buena is a perennial plant that grows up to 1 meter in height with oblong shaped leaves with toothed margins. Flowers are hairy and the color is bluish to purplish with axillary head like whorls.",
+            "uses": "For Pain (headache, stomachache), Rheumatism, arthritis and headache, Cough & Cold, Swollen gums, Toothache, Menstrual & gas pain, Nausea & Fainting, insect bites and pruritis.\r\nDigestive disorder, bad breath, skin tonic, insect bites, nausea, morning sickness, fainting, asthma, anti-allergy, antioxidant, cough and colds, pain reliever, anti-bacterial, tooth and mouth diseases.\r\n"
+        }
+    ]
+}
