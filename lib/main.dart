@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Herbal App',
+      title: 'Ciceley',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          brightness: Brightness.dark, primaryColor: Colors.greenAccent),
+          brightness: Brightness.light,
+          primaryColor: Color.fromARGB(255, 248, 255, 252)),
       home: const SplashScreen(),
     );
   }
@@ -42,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
-        child: Image.asset('assets/leaf.png'),
+        child: Image.asset('assets/CiceleyLogo.png'),
       ),
     );
   }
