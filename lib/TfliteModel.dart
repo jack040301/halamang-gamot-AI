@@ -18,6 +18,7 @@ class _TfliteModelState extends State<TfliteModel> {
   final _items = [];
   var items;
   var plantName, description, uses, scienName, location;
+  double percentage = 0.00;
   int _selectedIndex = 0;
 
   bool imageSelect = false;
@@ -34,7 +35,7 @@ class _TfliteModelState extends State<TfliteModel> {
     Map myMap = await json.decode(response);
 
     final desc = res[0]['index'];
-
+    percentage = res[0]['confidence'];
     //print(myMap);
 
     myMap.forEach((key, value) {
@@ -73,8 +74,6 @@ class _TfliteModelState extends State<TfliteModel> {
       imageSelect = true;
     });
 
-    print(_results);
-
     readJson(_results);
   }
 
@@ -94,7 +93,7 @@ class _TfliteModelState extends State<TfliteModel> {
           child: Image.asset('assets/Ciceley.png'),
         ),
         /* title: const Text("Ciceley"), */
-        backgroundColor: Color.fromARGB(255, 13, 19, 12),
+        backgroundColor: const Color.fromARGB(255, 13, 19, 12),
       ),
       body: ListView(
         shrinkWrap: true,
@@ -119,47 +118,53 @@ class _TfliteModelState extends State<TfliteModel> {
               const SizedBox(
                 height: 20,
               ),
-              if (_results != null)
+              if (_results != null && percentage > 0.50)
                 Text(
                   '${_results![0]["label"]}',
                   style: const TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 25.0,
                   ),
+                ),
+              if (_results != null && percentage < 0.50)
+                const Text(
+                  'The selected image cannot be recognized by the application as an herb or must be at least 50% local herb. Please select image of an herb',
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
                 )
               else
                 Container()
             ],
           ),
-          if (_results != null)
+          if (_results != null && percentage > 0.50)
             Text(
               'Herb: $plantName',
-              style:
-                  TextStyle(color: Color.fromARGB(255, 18, 1, 1), fontSize: 15),
+              style: const TextStyle(
+                  color: Color.fromARGB(255, 18, 1, 1), fontSize: 15),
             ),
-          if (_results != null)
+          if (_results != null && percentage > 0.50)
             Text(
               'Scientific name: $scienName',
-              style:
-                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+              style: const TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
             ),
-          if (_results != null)
+          if (_results != null && percentage > 0.50)
             Text(
               'Description: $description',
-              style:
-                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+              style: const TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
             ),
-          if (_results != null)
+          if (_results != null && percentage > 0.50)
             Text(
               'Where can it be found: $location',
-              style:
-                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+              style: const TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
             ),
-          if (_results != null)
+          if (_results != null && percentage > 0.50)
             Text(
               'What are its uses: $uses',
-              style:
-                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+              style: const TextStyle(
+                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
             ),
         ],
       ),
