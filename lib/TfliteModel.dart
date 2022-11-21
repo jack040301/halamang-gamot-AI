@@ -73,6 +73,8 @@ class _TfliteModelState extends State<TfliteModel> {
       imageSelect = true;
     });
 
+    print(_results);
+
     readJson(_results);
   }
 
