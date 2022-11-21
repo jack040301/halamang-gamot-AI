@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
-        child: Image.asset('assets/CiceleyLogo.png'),
+        child: Image.asset('assets/Ciceley_Splash.png'),
       ),
     );
   }
