@@ -79,7 +79,19 @@ class _TfliteModelState extends State<TfliteModel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Halaman-Gamot"),
+        /* leading: Image.asset('assets/CiceleyLogo.png'),
+        leadingWidth: 30, */
+        /* leading: Container(
+          width: 20,
+          height: 20,
+          child: Image.asset('assets/CiceleyLogo.png'),
+        ), */
+        title: Container(
+          width: 70,
+          child: Image.asset('assets/Ciceley.png'),
+        ),
+        /* title: const Text("Ciceley"), */
+        backgroundColor: Color.fromARGB(255, 13, 19, 12),
       ),
       body: ListView(
         children: [
@@ -89,11 +101,11 @@ class _TfliteModelState extends State<TfliteModel> {
                   child: Image.file(_image),
                 )
               : Container(
-                  margin: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(20),
                   child: const Opacity(
                     opacity: 0.8,
                     child: Center(
-                      child: Text("No image selected"),
+                      child: Text("Please select an image"),
                     ),
                   ),
                 ),
@@ -106,35 +118,61 @@ class _TfliteModelState extends State<TfliteModel> {
                 Text(
                   '${_results![0]["label"]}',
                   style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 25.0,
                   ),
                 )
               else
                 Container()
             ],
           ),
-          if (_results != null) Text("$plantName"),
-          if (_results != null) Text("$scienName"),
-          if (_results != null) Text("$description"),
-          if (_results != null) Text("$location"),
-          if (_results != null) Text("$uses"),
+          if (_results != null)
+            Text(
+              'Herb: $plantName',
+              style:
+                  TextStyle(color: Color.fromARGB(255, 18, 1, 1), fontSize: 15),
+            ),
+          if (_results != null)
+            Text(
+              'Scientific name: $scienName',
+              style:
+                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+            ),
+          if (_results != null)
+            Text(
+              'Description: $description',
+              style:
+                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+            ),
+          if (_results != null)
+            Text(
+              'Where can it be found: $location',
+              style:
+                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+            ),
+          if (_results != null)
+            Text(
+              'What are its uses: $uses',
+              style:
+                  TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+            ),
         ],
       ),
+
       floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Column(mainAxisAlignment: MainAxisAlignment.end, children: [
         FloatingActionButton(
           heroTag: "btn1",
           onPressed: getImage,
           tooltip: "Take Image",
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: Color.fromARGB(255, 0, 20, 10),
           child: const Icon(Icons.camera),
         ),
         FloatingActionButton(
           heroTag: "btn2",
           onPressed: pickImage,
           tooltip: "Pick Image",
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: Color.fromARGB(255, 0, 20, 10),
           child: const Icon(Icons.image),
         ),
       ]),
