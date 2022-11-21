@@ -137,34 +137,21 @@ class _TfliteModelState extends State<TfliteModel> {
             ],
           ),
           if (_results != null && percentage > 0.50)
-            Text(
-              'Herb: $plantName',
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 18, 1, 1), fontSize: 15),
-            ),
-          if (_results != null && percentage > 0.50)
-            Text(
-              'Scientific name: $scienName',
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
-            ),
-          if (_results != null && percentage > 0.50)
-            Text(
-              'Description: $description',
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
-            ),
-          if (_results != null && percentage > 0.50)
-            Text(
-              'Where can it be found: $location',
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
-            ),
-          if (_results != null && percentage > 0.50)
-            Text(
-              'What are its uses: $uses',
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0), fontSize: 15),
+            Container(
+              alignment: Alignment.center,
+              child: Text(
+                'Herb: $plantName'
+                '\n'
+                'Scientific name: $scienName'
+                '\n\n'
+                'Description: $description'
+                '\n\n'
+                'Where can it be found: $location'
+                '\n\n'
+                'What are its uses: $uses',
+                style: const TextStyle(
+                    color: Color.fromARGB(255, 18, 1, 1), fontSize: 15),
+              ),
             ),
         ],
       ),
