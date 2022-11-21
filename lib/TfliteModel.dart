@@ -18,6 +18,7 @@ class _TfliteModelState extends State<TfliteModel> {
   final _items = [];
   var items;
   var plantName, description, uses, scienName, location;
+  int _selectedIndex = 0;
 
   bool imageSelect = false;
   @override
@@ -121,7 +122,39 @@ class _TfliteModelState extends State<TfliteModel> {
           if (_results != null) Text("$uses"),
         ],
       ),
-      floatingActionButton:
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera),
+            label: 'Camera',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.image),
+            label: 'Pick Image',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: (int index) {
+          switch (index) {
+            case 0:
+              // only scroll to top when current index is selected.
+              if (_selectedIndex == index) {
+                getImage();
+              }
+              break;
+            case 1:
+              pickImage();
+              break;
+          }
+          setState(
+            () {
+              _selectedIndex = index;
+            },
+          );
+        },
+      ),
+      /*    floatingActionButton:
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
         FloatingActionButton(
           heroTag: "btn1",
@@ -137,7 +170,7 @@ class _TfliteModelState extends State<TfliteModel> {
           backgroundColor: Colors.greenAccent,
           child: const Icon(Icons.image),
         ),
-      ]),
+      ]), */
     );
   }
 
