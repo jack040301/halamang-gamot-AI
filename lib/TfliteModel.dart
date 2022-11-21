@@ -158,8 +158,9 @@ class _TfliteModelState extends State<TfliteModel> {
             ),
         ],
       ),
+
       floatingActionButton:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Column(mainAxisAlignment: MainAxisAlignment.end, children: [
         FloatingActionButton(
           heroTag: "btn1",
           onPressed: getImage,
