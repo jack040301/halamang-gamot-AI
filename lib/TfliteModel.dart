@@ -180,7 +180,7 @@ class _TfliteModelState extends State<TfliteModel> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Color.fromARGB(255, 0, 0, 0),
         onTap: (int index) {
           switch (index) {
             case 0:
