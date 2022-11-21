@@ -94,6 +94,8 @@ class _TfliteModelState extends State<TfliteModel> {
         backgroundColor: Color.fromARGB(255, 13, 19, 12),
       ),
       body: ListView(
+        shrinkWrap: true,
+        padding: const EdgeInsets.all(19),
         children: [
           (imageSelect)
               ? Container(
@@ -160,7 +162,7 @@ class _TfliteModelState extends State<TfliteModel> {
       ),
 
       floatingActionButton:
-          Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         FloatingActionButton(
           heroTag: "btn1",
           onPressed: getImage,
