@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
+import 'package:tflite_image_classification/Listviewherb.dart';
 
 class TfliteModel extends StatefulWidget {
   const TfliteModel({Key? key}) : super(key: key);
@@ -88,6 +89,19 @@ class _TfliteModelState extends State<TfliteModel> {
           height: 20,
           child: Image.asset('assets/CiceleyLogo.png'),
         ), */
+        actions: <Widget>[
+          Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HerbList()),
+                  );
+                },
+                child: const Icon(Icons.menu_book_rounded),
+              )),
+        ],
         title: Container(
           width: 70,
           child: Image.asset('assets/Ciceley.png'),
