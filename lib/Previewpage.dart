@@ -1,23 +1,23 @@
-import 'dart:io';
-import 'dart:convert';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'package:tflite/tflite.dart';
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:tflite_image_classification/Listviewherb.dart';
 
-import 'CameraApp.dart';
+class PreviewPage extends StatefulWidget {
+  const PreviewPage({Key? key, required this.picture}) : super(key: key);
 
-class TfliteModel extends StatefulWidget {
-  const TfliteModel({Key? key}) : super(key: key);
-
+  final XFile picture;
   @override
-  _TfliteModelState createState() => _TfliteModelState();
+  _PreviewPageState createState() => _PreviewPageState();
 }
 
-class _TfliteModelState extends State<TfliteModel> {
+class _PreviewPageState extends State<PreviewPage> {
   FlutterTts flutterTts = FlutterTts();
 
   late File _image;
@@ -35,6 +35,9 @@ class _TfliteModelState extends State<TfliteModel> {
   void initState() {
     super.initState();
     loadModel();
+    File image = File(widget.picture.path);
+
+    imageClassification(image);
 
     flutterTts.setStartHandler(() {
       ///This is called when the audio starts
@@ -55,29 +58,6 @@ class _TfliteModelState extends State<TfliteModel> {
         speaking = false;
       });
     });
-  }
-
-  speak(String text) async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1);
-    await flutterTts.setVolume(1);
-
-    var result = await flutterTts.speak(text);
-
-    if (result == 1) {
-      setState(() {
-        speaking = true;
-      });
-    }
-  }
-
-  Future _stop() async {
-    var result = await flutterTts.stop();
-    if (result == 1) {
-      setState(() {
-        speaking = false;
-      });
-    }
   }
 
   Future<void> readJson(res) async {
@@ -129,6 +109,29 @@ class _TfliteModelState extends State<TfliteModel> {
     readJson(_results);
   }
 
+  speak(String text) async {
+    await flutterTts.setLanguage("en-US");
+    await flutterTts.setPitch(1);
+    await flutterTts.setVolume(1);
+
+    var result = await flutterTts.speak(text);
+
+    if (result == 1) {
+      setState(() {
+        speaking = true;
+      });
+    }
+  }
+
+  Future _stop() async {
+    var result = await flutterTts.stop();
+    if (result == 1) {
+      setState(() {
+        speaking = false;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -153,14 +156,18 @@ class _TfliteModelState extends State<TfliteModel> {
         /* title: const Text("Ciceley"), */
         backgroundColor: const Color.fromARGB(255, 13, 19, 12),
       ),
-      body: ListView(
+      body:
+          /* Image.file(File(widget.picture.path), fit: BoxFit.cover, width: 250) */
+
+          ListView(
         shrinkWrap: true,
         padding: const EdgeInsets.all(19),
         children: [
           (imageSelect)
               ? Container(
                   margin: const EdgeInsets.all(10),
-                  child: Image.file(_image),
+                  child: Image.file(File(widget.picture.path),
+                      fit: BoxFit.scaleDown, width: 250),
                 )
               : Container(
                   margin: const EdgeInsets.all(20),
@@ -231,58 +238,6 @@ class _TfliteModelState extends State<TfliteModel> {
             ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'Camera',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.image),
-            label: 'Pick Image',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 0, 0, 0),
-        onTap: (int index) async {
-          switch (index) {
-            case 0:
-              // only scroll to top when current index is selected.
-              if (_selectedIndex == index) {
-                await availableCameras().then((value) => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) => CameraPage(cameras: value))));
-              }
-              break;
-            case 1:
-              pickImage();
-              break;
-          }
-          setState(
-            () {
-              _selectedIndex = index;
-            },
-          );
-        },
-      ),
     );
-  }
-
-  Future pickImage() async {
-    final ImagePicker _picker = ImagePicker();
-    final XFile? pickedFile = await _picker.pickImage(
-      source: ImageSource.gallery,
-    );
-    File image = File(pickedFile!.path);
-    imageClassification(image);
-  }
-
-  Future getImage() async {
-    final image = await ImagePicker().pickImage(source: ImageSource.camera);
-    setState(() {
-      _image = File(image!.path);
-    });
-    imageClassification(_image);
   }
 }

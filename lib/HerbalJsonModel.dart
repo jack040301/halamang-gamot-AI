@@ -26,3 +26,5 @@ class HerbalJsonModel {
     imageURL = json['imageUrl'];
   }
 }
+
+class PictureClass {}
